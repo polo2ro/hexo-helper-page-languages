@@ -1,0 +1,28 @@
+{
+    "name": "hexo-helper-page-languages",
+    "version": "0.0.1",
+    "description": "List available language on a hexo page",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/polo2ro/hexo-helper-page-languages.git"
+    },
+    "keywords": [
+        "hexo",
+        "plugin",
+        "helper",
+        "i18n",
+        "languages"
+    ],
+    "author": "Paul de Rosanbo <paul@rosanbo.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/polo2ro/hexo-helper-page-languages/issues"
+    },
+    "homepage": "https://github.com/polo2ro/hexo-helper-page-languages",
+    "dependencies": {},
+    "devDependencies": {}
+}
