@@ -17,7 +17,7 @@ Install using [npm](https://www.npmjs.com/).
 
 ### In your front-matter.
 
-The default language:
+The default language, in /en/docs/hello.md:
 
 ```yaml
 
@@ -27,7 +27,7 @@ contentId: hello-word
 
 ```
 
-A translated version:
+A translated version file, if /fr/docs/bonjour.md:
 
 ```yaml
 
@@ -42,6 +42,24 @@ If contentId is not provided, the full path except language will be used as valu
 This can come handy if you care about SEO.
 
 
+This other example can work because of the same file names.
+
+The default language, in /en/docs/intro.md:
+
+```yaml
+
+title: Introduction
+lang: en
+```
+
+A translated version file, if /fr/docs/intro.md:
+
+```yaml
+
+title: Bonjour le monde
+lang: fr
+```
+
 
 ### in your ejs templates
 
@@ -50,7 +68,7 @@ List all pages for the same contentId.
 ```html
 
 <dl>
-    <dt><%= __('footer.otherlang') %></dt>
+    <dt><%= __('docs.otherlang') %></dt>
     <% var versions = getPageLanguages();
     for (var i=0; i<versions.length; i++) { %>
     <dd><a href="<%= versions[i].url %>"><%= versions[i].label %></a></dd>
@@ -58,3 +76,7 @@ List all pages for the same contentId.
 </dl>
 
 ```
+getPageLanguages return an array of objects, with:
+
+* url: full path url, example `/fr/docs/bonjour.html`
+* label: two letter code for the language, like `fr`
